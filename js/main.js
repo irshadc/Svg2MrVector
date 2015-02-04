@@ -55,6 +55,10 @@ function loadFile(e, file) {
     parseFile(e.target.result);
 }
 
+function parseFromTextArea() {
+    parseFile($('textarea#svg-code').val());
+}
+
 function extractFileNameWithoutExt(filename) {
     var dotIndex = filename.lastIndexOf(".");
     if (dotIndex > -1) {
